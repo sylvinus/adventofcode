@@ -10,6 +10,7 @@ for y, row in enumerate(grid):
             assert x+y > 0
             incoming_connections = tuple(d for d in (N, S, E, W) if d in [invs[c] for c in connects[grid[y+d[1]][x+d[0]]]])
             grid[y] = grid[y].replace("S", connects_inv[incoming_connections])
+            break
 pos, i = start_pos, 0
 nextdir = connects[grid[pos[1]][pos[0]]][0]
 mainloop = [[False] * len(line) for line in grid]
