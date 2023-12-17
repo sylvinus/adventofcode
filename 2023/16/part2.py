@@ -8,11 +8,11 @@ maps = {
     "-":  {S: (E, W), N: (E, W)}
 }
 def tiles(start):
-    beams, seen = [start], {}
+    beams, seen = [start], set()
     while len(beams) > 0:
         pos, vect = beams.pop()
         if (pos, vect) not in seen and 0 <= pos[0] < len(grid[0]) and 0 <= pos[1] < len(grid):
-            seen[(pos, vect)] = True
+            seen.add((pos, vect))
             tile = grid[pos[1]][pos[0]]
             for newvect in (maps.get(tile, {}).get(vect) or (vect, )):
                 beams.append(((pos[0]+newvect[0], pos[1]+newvect[1]), newvect))
