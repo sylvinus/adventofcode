@@ -6,10 +6,10 @@ heapq.heappush(opens, (0, (0, 0), []))
 bests = {}
 while len(opens) > 0:
     cost, pos, path = heapq.heappop(opens)
-    if pos == (len(grid[0])-1, len(grid)-1):
+    lastvects = tuple(path[-straightlen(path):])
+    if pos == (len(grid[0])-1, len(grid)-1) and len(lastvects) >= 4:
         print(cost)
         break
-    lastvects = tuple(path[-straightlen(path):])
     for v in {(0, -1), (0, 1), (1, 0), (-1, 0)}:
         if len(lastvects) > 0 and v == ((-lastvects[-1][0], -lastvects[-1][1])): # no u-turns
             continue
