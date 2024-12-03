@@ -1,0 +1,2 @@
+safe=lambda d:0 not in d and max(map(abs,d)) <= 3 and (all(x<=0 for x in d) or all(x>=0 for x in d))
+print(sum(safe([int(j)-int(i) for i,j in zip(r.split(),r.split()[1:])]) for r in open("input.txt")))
