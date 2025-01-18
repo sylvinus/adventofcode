@@ -1,0 +1,2 @@
+lines = [(list(map(int,x[0].split("-"))), list(map(int, x[1].split("-")))) for x in [line.strip().split(",") for line in open("input.txt")]]
+print(sum((line[1][0] <= line[0][0] <= line[1][1] or line[0][0] <= line[1][0] <= line[0][1]) for line in lines))

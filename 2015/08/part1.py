@@ -1,0 +1,1 @@
+print(sum(len(l)-len(eval(l)) for l in map(str.strip,open("input.txt"))))

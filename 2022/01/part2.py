@@ -1,0 +1,1 @@
+print(sum(sorted((sum(int(x) for x in group.split()) for group in open("input.txt").read().split("\n\n")), reverse=True)[:3]))

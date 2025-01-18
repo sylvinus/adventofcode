@@ -1,0 +1,1 @@
+print(sum(2*l+2*w+w*h*l for l,w,h in [sorted([int(y) for y in x.strip().split("x")]) for x in open("input.txt")]))

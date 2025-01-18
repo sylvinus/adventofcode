@@ -9,4 +9,4 @@ For those interested in such things, I recommend checking out Peter Norvig's [py
 
 To init a new day, use this:
 
-```YEAR=2015;DAY=06;mkdir -p $YEAR/$DAY;touch $YEAR/$DAY/input.txt;touch $YEAR/$DAY/part1.py;touch $YEAR/$DAY/part2.py;code $YEAR/$DAY/part1.py;code $YEAR/$DAY/input.txt;open 'https://adventofcode.com/'$YEAR'/day/'$DAY;open 'https://adventofcode.com/'$YEAR'/day/'$DAY'/input'```
+```YEAR=2015;DAY=06;mkdir -p $YEAR/$DAY;touch $YEAR/$DAY/input.txt;touch $YEAR/$DAY/part1.py;touch $YEAR/$DAY/part2.py;```
